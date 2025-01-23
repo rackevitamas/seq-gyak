@@ -38,33 +38,33 @@ const Staff = sequelize.define(
 
 // console.log(sequelize.models.students);
 
-Staff.sync()
-	.then(() => {
-		console.log("Table and model synced successful");    
-        Staff.bulkCreate([
-            {
-                "lastName" : "LOL",
-                "firstName" : "KIRÁLY",
-                "position" : "NET Admin",
-                "salary" : 1489000
-            },
-            {
-                "lastName" : "Brightest",
-                "firstName" : "Woman",
-                "position" : "Project manager",
-                "salary" : 1289000
-            },
-            {
-                "lastName" : "Darkest",
-                "firstName" : "Guy",
-                "position" : "Cyber Security",
-                "salary" : 1288000
-            }
-        ]);
-    })
-    .catch((err) => {
-		console.log("Error syncing the table and model");
-});
+// Staff.sync()
+// 	.then(() => {
+// 		console.log("Table and model synced successful");    
+//         Staff.bulkCreate([
+//             {
+//                 "lastName" : "LOL",
+//                 "firstName" : "KIRÁLY",
+//                 "position" : "NET Admin",
+//                 "salary" : 1489000
+//             },
+//             {
+//                 "lastName" : "Brightest",
+//                 "firstName" : "Woman",
+//                 "position" : "Project manager",
+//                 "salary" : 1289000
+//             },
+//             {
+//                 "lastName" : "Darkest",
+//                 "firstName" : "Guy",
+//                 "position" : "Cyber Security",
+//                 "salary" : 1288000
+//             }
+//         ]);
+//     })
+//     .catch((err) => {
+// 		console.log("Error syncing the table and model");
+// });
 
 Staff.sync({alert: true})
         .then(() => {
